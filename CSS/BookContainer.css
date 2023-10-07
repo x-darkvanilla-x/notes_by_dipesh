@@ -171,7 +171,7 @@ button:hover
     font-size: 1.4em;
   }
 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body,h1,h2,h3,h4,h6 {font-family: "Lato", sans-serif;}
 
 body, html {
     color: #777;
@@ -378,4 +378,48 @@ i
 h6
 {
     color: black;
+}
+
+.testimonials
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.comments
+{
+    width: 320px;
+    height: auto;
+    margin: 10px;
+    background-color: rgb(207, 217, 226);
+}
+
+.comments .profile
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -30px;
+    border: 10px solid #FBFEF9;
+    margin-bottom: 10px;
+}
+
+.comments .profile img
+{
+    width: 100%;
+}
+
+.comments h5
+{
+    text-align: center;
+    margin: 0px 20px;
+    margin-bottom: 30px;
+}
+
+.comments stars .checked
+{
+    color: orange;
 }
