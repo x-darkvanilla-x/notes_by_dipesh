@@ -251,6 +251,19 @@ table .text
         width: 110px;
         height: 110px;
     }
+
+    main .message
+    {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 800px)
+{
+    main .message
+    {
+        display: none;
+    }
 }
 
 .message
