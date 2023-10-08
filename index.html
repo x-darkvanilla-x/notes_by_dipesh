@@ -8,15 +8,18 @@
     <title>Notes by Dipesh</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2232/2232688.png">
     <link href="CSS/BookContainer.css" rel="stylesheet">
+    <link href="CSS/snackbar.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="snackbar">Downloading..</div>
+
     <!-- Short Introduction -->
     <center>
         <div class="Head">
             <h1><q>I love Web Development</q></h1>
-            <h3>I am Dipesh Adelkar. I am a dreamer whose dream is to build awesome things in the future and to contribute something useful to the world.But hey this website symbolizes that I contribute something in the world.</h3>
+            <h3>I am <font style="color: orange;">Dipesh Adelkar</font>, I am a dreamer whose dream is to build awesome things in the future and to contribute something useful to the world.But hey this website symbolizes that I contribute something in the world.</h3>
             <table>
                 <tr>
                     <td>
@@ -51,7 +54,7 @@
                     </div>
                     <p>
                         <a href="files/Python_IMP.pdf">
-                        <button>Python</button>    
+                        <button onclick="myFunction()">Python</button>    
                         </a>
                     </p>
                 </div>
@@ -62,7 +65,7 @@
                     </div>
                     <p>
                         <a href="files/CN_notes.pdf">
-                        <button>CN</button>    
+                        <button onclick="myFunction()">CN</button>    
                         </a>
                     </p>
                 </div>
@@ -74,7 +77,7 @@
                     </div>
                     <p>
                         <a href="files/Python_cheat.pdf">
-                        <button>Python</button>    
+                        <button onclick="myFunction()">Python</button>    
                         </a>
                     </p>
                 </div>
@@ -84,8 +87,8 @@
                         <img src="https://cdn-icons-png.flaticon.com/128/1584/1584506.png">
                     </div>
                     <p>
-                        <a href="">
-                        <button>OS</button>    
+                        <a href="files/OS_notes.pdf">
+                        <button onclick="myFunction()">OS</button>    
                         </a>
                     </p>
                 </div>
@@ -96,7 +99,7 @@
                     </div>
                     <p>
                         <a href="files/HTML_Notes.pdf">
-                        <button>HTML</button>    
+                        <button onclick="myFunction()">HTML</button>    
                         </a>
                     </p>
                 </div>
@@ -108,7 +111,7 @@
                     </div>
                     <p>
                         <a href="files/HTML_CHEAT_SHEET.pdf">
-                        <button>HTML</button>    
+                        <button onclick="myFunction()">HTML</button>    
                         </a>
                     </p>
                 </div>
@@ -120,7 +123,7 @@
                     </div>
                     <p>
                         <a href="files/CLDS_practice.pdf">
-                        <button>CLDS</button>    
+                        <button onclick="myFunction()">CLDS</button>    
                         </a>
                     </p>
                 </div>
@@ -132,7 +135,7 @@
                     </div>
                     <p>
                         <a href="files/DBMS_question.pdf">
-                        <button>DBMS</button>    
+                        <button onclick="myFunction()">DBMS</button>    
                         </a>
                     </p>
                 </div>
@@ -144,7 +147,7 @@
                     </div>
                     <p>
                         <a href="files/c_practice_programs.pdf">
-                        <button>DBMS</button>    
+                        <button onclick="myFunction()">C Program</button>    
                         </a>
                     </p>
                 </div>
@@ -156,7 +159,7 @@
                     </div>
                     <p>
                         <a href="files/MySQL_Cheatsheet.pdf.pdf">
-                        <button>SQL</button>    
+                        <button onclick="myFunction()">SQL</button>    
                         </a>
                     </p>
                 </div>
@@ -168,7 +171,7 @@
                     </div>
                     <p>
                         <a href="files/python_50_programs.pdf">
-                        <button>Python</button>    
+                        <button onclick="myFunction()">Python</button>    
                         </a>
                     </p>
                 </div>
@@ -180,11 +183,12 @@
                     </div>
                     <p>
                         <a href="files/tkinter_programs.pdf">
-                        <button>Python</button>    
+                        <button onclick="myFunction()">Python</button>    
                         </a>
                     </p>
                 </div>
 
+                <!--
                 <div class="book cheat" id="os operating system">
                     <h6>CMD Commands</h6>
                     <div class="bookimg">
@@ -192,7 +196,7 @@
                     </div>
                     <p>
                         <a href="">
-                        <button>OS</button>    
+                        <button onclick="myFunction()">OS</button>    
                         </a>
                     </p>
                 </div>
@@ -204,10 +208,11 @@
                     </div>
                     <p>
                         <a href="">
-                        <button>OS</button>    
+                        <button onclick="myFunction()">OS</button>    
                         </a>
                     </p>
                 </div>
+                -->
 
                 <div class="book special" id="self guide books">
                     <h6>Self Guidance Books</h6>
@@ -215,7 +220,7 @@
                         <img src="https://cdn-icons-png.flaticon.com/128/3426/3426653.png">
                     </div>
                     <p>
-                        <a href="">
+                        <a href="books.html">
                         <button>Books</button>    
                         </a>
                     </p>
@@ -276,10 +281,10 @@
     <!-- Footer -->
     <div class="footer">   
         <li><h3>Follow me on :</h3> </li>
-        <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.facebook.com/dipesh.adelkar.7/" class="social-icon" target="_blank"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/x_darkvanilla_x/" class="social-icon" target="_blank"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/dipesh-adelkar-378ba3256/" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/x-darkvanilla-x" class="social-icon" target="_blank"> <i class="fa fa-github"></i></a></li>
     </div>
 
     <!-- Copy Right -->
