@@ -55,6 +55,9 @@ input
     margin-bottom: 20px;
     font-family: verdana;
     border: 1px solid black;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .autocomplete {
