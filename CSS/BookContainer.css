@@ -157,6 +157,7 @@ button
     transition: all 0.2s ease;
     border: 0;
     width: 90%;
+    border: 2px solid transparent;
 }
 
 button:hover
@@ -304,7 +305,7 @@ table .text
 .fa-facebook:hover {
     background-color: #3d5b99;
 }
-.fa-twitter {
+.fa-instagram {
     padding:10px 12px;
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -313,32 +314,8 @@ table .text
     transition: .5s;
     background-color:  #F39237;
 }
-.fa-twitter:hover {
-    background-color: #00aced;
-}
-.fa-rss {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color:  #F39237;
-}
-.fa-rss:hover {
-    background-color: #eb8231;
-}
-.fa-youtube {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color:  #F39237;
-}
-.fa-youtube:hover {
-    background-color: #e64a41;
+.fa-instagram:hover {
+    background-color: #d62976;
 }
 .fa-linkedin {
     padding:10px 14px;
@@ -386,6 +363,7 @@ h6
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .comments
@@ -394,6 +372,7 @@ h6
     height: auto;
     margin: 10px;
     background-color: rgb(207, 217, 226);
+    background-color: rgb(219, 231, 242);
 }
 
 .comments .profile
@@ -416,6 +395,7 @@ h6
 {
     text-align: center;
     margin: 0px 20px;
+    margin-top: 5px;
     margin-bottom: 30px;
 }
 
