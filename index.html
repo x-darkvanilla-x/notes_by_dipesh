@@ -15,6 +15,10 @@
 <body>
     <div id="snackbar">Downloading..</div>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <img src="https://cdn-icons-png.flaticon.com/128/724/724811.png">
+    </button>
+
     <!-- Short Introduction -->
     <center>
         <div class="Head">
@@ -112,6 +116,29 @@
                     <p>
                         <a href="files/HTML_CHEAT_SHEET.pdf">
                         <button onclick="myFunction()">HTML</button>    
+                        </a>
+                    </p>
+                </div>
+
+                <div class="book" id="css style cascading sheet website">
+                    <div class="bookimg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png">
+                    </div>
+                    <p>
+                        <a href="files/CSS_Notes.pdf">
+                        <button onclick="myFunction()">CSS</button>    
+                        </a>
+                    </p>
+                </div>
+
+                <div class="book cheat" id="css style cascading cheat sheet website">
+                    <h6>Cheat Sheet</h6>
+                    <div class="bookimg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png">
+                    </div>
+                    <p>
+                        <a href="https://drive.google.com/file/d/1qPNg4L7BZEQfkaBWD7v9nOHo54dk8N1E/view">
+                        <button onclick="myFunction()">CSS</button>    
                         </a>
                     </p>
                 </div>
@@ -354,6 +381,25 @@
     // After 3 seconds, remove the show class from DIV
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
   }
+
+  let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
 </script>
 
 </html>
