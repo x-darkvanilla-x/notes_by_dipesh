@@ -9,6 +9,7 @@
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2232/2232688.png">
     <link href="CSS/BookContainer.css" rel="stylesheet">
     <link href="CSS/snackbar.css" rel="stylesheet">
+    <link href="CSS/nav.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 </head>
 
@@ -16,8 +17,30 @@
     <div id="snackbar">Downloading..</div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">
-        <img src="https://cdn-icons-png.flaticon.com/128/10570/10570183.png">
+        <img src="https://cdn-icons-png.flaticon.com/128/11480/11480866.png">
     </button>
+
+    <!-- navigation bar -->
+    <div class="header">
+        <table>
+            <tr>
+                <td class="part0">
+                    <div class="image">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJsh_HvimSao3HWWPsaldYXzGkZRNAd7iGvtefW5gUnVyo=s411-c-no">
+                    </div>
+                </td>
+                <td class="part1">
+                    <h3>Notes By <font class="name">Dipesh</font> &#128149;</h3>
+                </td>
+                <td class="part2"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="books.html"><h2>Books &#128218;</h2></a>
+      </div>
 
     <!-- Short Introduction -->
     <center>
@@ -72,7 +95,7 @@
                     </p>
                 </div>
 
-                <div class="book" id="cn cnn computer network ip">
+                <div class="book" id="cn cnn computer network ip computer networks">
                     <div class="bookimg">
                         <img src="https://cdn-icons-png.flaticon.com/128/3786/3786085.png">
                     </div>
@@ -296,6 +319,19 @@
                         </a>
                     </p>
                 </div>
+                
+
+                <div class="book special" id="self guide books">
+                    <h6>Professional Guidance</h6>
+                    <div class="bookimg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2554/2554922.png">
+                    </div>
+                    <p>
+                        <a href="">
+                        <button>Roadmap</button>    
+                        </a>
+                    </p>
+                </div>
                 -->
 
                 <div class="book special" id="self guide books">
@@ -409,6 +445,18 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     }
+</script>
+
+
+<script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+/* Close/hide the sidenav */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 </script>
 
 </html>
