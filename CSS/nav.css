@@ -30,6 +30,7 @@
 {
     text-align: left;
     padding-left: 20px;
+    width: 100%;
 }
 
 .header .image
@@ -38,7 +39,7 @@
     height: 35px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #dcdada;
+    border: 3px solid orange;
 }
 
 .header img
