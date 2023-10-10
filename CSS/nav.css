@@ -103,6 +103,11 @@
     background-color: orange;
     z-index: 101;
   }
+
+  #side_text
+  {
+    display: none;
+  }
   
   .sidenav a {
     padding: 8px 0px;

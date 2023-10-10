@@ -38,11 +38,13 @@
     </div>
 
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="books.html"><h2>Books &#128218;</h2></a>
-        <a href="about.html"><h2>About Us &#129777;&#127995;&#8205;&#129778;&#127996;</h2></a>
-        <a href="https://wa.me/9326228158?text=Hello, I am [Your Name], and I discovered your website recently. I would like to request the inclusion of [Book Name along with Author's name and book cover photo if possible] on your platform. Thank you for considering my request."><h2>Request Content &#128231;</h2></a>
-      </div>
+        <div id="side_text">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="books.html"><h2>Books &#128218;</h2></a>
+            <a href="about.html"><h2>About Us &#129777;&#127995;&#8205;&#129778;&#127996;</h2></a>
+            <a href="https://wa.me/9326228158?text=Hello, I am [Your Name], and I discovered your website recently. I would like to request the inclusion of [Book Name along with Author's name and book cover photo if possible] on your platform. Thank you for considering my request."><h2>Request Content &#128231;</h2></a>
+        </div>
+    </div>
 
     <!-- Short Introduction -->
     <center>
@@ -336,6 +338,18 @@
                 </div>
                 -->
 
+                <div class="book special" id="app application photomath mod">
+                    <h6 style="background-color: rgb(255, 61, 61);">Photomath Mod Apk</h6>
+                    <div class="bookimg">
+                        <img src="files/photomath.png">
+                    </div>
+                    <p>
+                        <a href="https://dl.antfiles.com/vfm-admin/vfm-downloader.php?q=0&sh=fd68304ba1063f31eeacb80a89b2c384&share=c0b119c7c5a914352e781f87e96041aa">
+                        <button>APk Install</button>    
+                        </a>
+                    </p>
+                </div>
+
                 <div class="book special" id="self guide books">
                     <h6>Self Guidance Books</h6>
                     <div class="bookimg">
@@ -453,11 +467,13 @@
 <script>
     function openNav() {
   document.getElementById("mySidenav").style.width = "100%";
+  setTimeout(function(){ document.getElementById("side_text").style.display = "block"; }, 300);
 }
 
 /* Close/hide the sidenav */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  setTimeout(function(){ document.getElementById("side_text").style.display = "none"; }, 200);
 }
 </script>
 
