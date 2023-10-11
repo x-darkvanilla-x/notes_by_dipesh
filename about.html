@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,381 +8,459 @@
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2232/2232688.png">
 
     <style>
-:root {
-    font-size: 10px;
-}
+        :root {
+            font-size: 10px;
+        }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: "Open Sans", Arial, sans-serif;
-    min-height: 100vh;
-    background-color: #fafafa;
-    color: #262626;
-    padding-bottom: 3rem;
+        body {
+            font-family: "Open Sans", Arial, sans-serif;
+            min-height: 100vh;
+            background-color: #fafafa;
+            color: #262626;
+            padding-bottom: 3rem;
 
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
 
-    background-color: #F9F6EE;
-    font-family: "Lato", sans-serif;
-}
+            background-color: #F9F6EE;
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-img {
-    display: block;
-}
+        img {
+            display: block;
+        }
 
-.container {
-    max-width: 93.5rem;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+        .container {
+            max-width: 93.5rem;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-.btn {
-    display: inline-block;
-    font: inherit;
-    background: none;
-    border: none;
-    color: inherit;
-    cursor: pointer;
-    background-color: rgb(55, 127, 235);
-    color: white;
-}
+        .btn {
+            display: inline-block;
+            font: inherit;
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            background-color: rgb(55, 127, 235);
+            color: white;
+        }
 
-::-webkit-scrollbar
-{
-    width: 0;
-}
+        ::-webkit-scrollbar {
+            width: 0;
+        }
 
-.visually-hidden {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-}
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
 
-/* Profile Section */
+        /* Profile Section */
 
-.profile {
-    padding: 5rem 0;
-}
-
-.profile::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.profile-image {
-    float: left;
-    width: calc(33.333% - 1rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 3rem;
-}
-
-.profile-image img {
-    width: 250px;
-    border-radius: 50%;
-}
-
-.profile-user-settings,
-.profile-stats,
-.profile-bio {
-    float: left;
-    width: calc(66.666% - 2rem);
-}
-
-.profile-user-settings {
-    margin-top: 1.1rem;
-}
-
-.profile-user-name {
-    display: inline-block;
-    font-size: 3.2rem;
-    font-weight: bold;
-}
-
-.profile-edit-btn {
-    font-size: 1.4rem;
-    line-height: 1.8;
-    border: 0.1rem solid #dbdbdb;
-    border-radius: 0.3rem;
-    padding: 0 2.4rem;
-    margin-left: 2rem;
-}
-
-.profile-stats {
-    margin-top: 2.3rem;
-}
-
-.profile-stats li {
-    display: inline-block;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    margin-right: 4rem;
-    cursor: pointer;
-}
-
-.profile-stats li:last-of-type {
-    margin-right: 0;
-}
-
-.profile-bio {
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-top: 2.3rem;
-}
-
-.profile-real-name,
-.profile-stat-count,
-.profile-edit-btn {
-    font-weight: 600;
-}
-
-.profile-edit-btn{
-    padding: 5px 20px;
-}
-
-/* Gallery Section */
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -1rem -1rem;
-    padding-bottom: 3rem;
-}
-
-.gallery-item {
-    position: relative;
-    flex: 1 0 22rem;
-    margin: 1rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-.gallery-item:hover .gallery-item-info,
-.gallery-item:focus .gallery-item-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.gallery-item-info {
-    display: none;
-}
-
-.gallery-item-info li {
-    display: inline-block;
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-.gallery-item-likes {
-    margin-right: 2.2rem;
-}
-
-.gallery-item-type {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2.5rem;
-    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-}
-
-.fa-clone,
-.fa-comment {
-    transform: rotateY(180deg);
-}
-
-.gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@media screen and (max-width: 40rem) {
-    .profile {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 4rem 0;
-    }
-
-    .profile::after {
-        display: none;
-    }
-
-    .profile-image,
-    .profile-user-settings,
-    .profile-bio,
-    .profile-stats {
-        float: none;
-        width: auto;
-    }
-
-    .profile-image img {
-        width: 7.7rem;
-    }
-
-    .profile-user-settings {
-        flex-basis: calc(100% - 10.7rem);
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-    }
-
-    .profile-user-name {
-        font-size: 2.2rem;
-    }
-
-    .profile-edit-btn {
-        order: 1;
-        padding: 0;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    .profile-edit-btn {
-        margin-left: 0;
-    }
-
-    .profile-bio {
-        font-size: 1.4rem;
-        margin-top: 1.5rem;
-    }
-
-    .profile-edit-btn,
-    .profile-bio,
-    .profile-stats {
-        flex-basis: 100%;
-    }
-
-    .profile-stats {
-        order: 1;
-        margin-top: 1.5rem;
-    }
-
-    .profile-stats ul {
-        display: flex;
-        text-align: center;
-        padding: 1.2rem 0;
-        border-top: 0.1rem solid #dadada;
-        border-bottom: 0.1rem solid #dadada;
-    }
-
-    .profile-stats li {
-        font-size: 1.4rem;
-        flex: 1;
-        margin: 0;
-    }
-
-    .profile-stat-count {
-        display: block;
-    }
-}
-
-@supports (display: grid) {
-    .profile {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: repeat(3, auto);
-        grid-column-gap: 3rem;
-        align-items: center;
-    }
-
-    .profile-image {
-        grid-row: 1 / -1;
-    }
-
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-        grid-gap: 2rem;
-    }
-
-    .profile-image,
-    .profile-user-settings,
-    .profile-stats,
-    .profile-bio,
-    .gallery-item,
-    .gallery {
-        width: auto;
-        margin: 0;
-    }
-
-    @media (max-width: 40rem) {
         .profile {
-            grid-template-columns: auto 1fr;
-            grid-row-gap: 1.5rem;
+            padding: 5rem 0;
+        }
+
+        .profile::after {
+            content: "";
+            display: block;
+            clear: both;
         }
 
         .profile-image {
-            grid-row: 1 / 2;
+            float: left;
+            width: calc(33.333% - 1rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 3rem;
         }
 
-        .profile-user-settings {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-gap: 1rem;
-        }
-
-        .profile-edit-btn,
-        .profile-stats,
-        .profile-bio {
-            grid-column: 1 / -1;
+        .profile-image img {
+            width: 250px;
+            border-radius: 50%;
         }
 
         .profile-user-settings,
-        .profile-edit-btn,
-        .profile-settings-btn,
-        .profile-bio,
-        .profile-stats {
-            margin: 0;
+        .profile-stats,
+        .profile-bio {
+            float: left;
+            width: calc(66.666% - 2rem);
         }
-    }
-}
 
-.Head
-{
-    text-align: center;
-    width: 100%;
-    margin: 30px 0px -30px 0px;
-    color: #777;
-    width: 90%;
-}
+        .profile-user-settings {
+            margin-top: 1.1rem;
+        }
 
-h1
-{
-    font-size: xx-large;
-}
+        .profile-user-name {
+            display: inline-block;
+            font-size: 3.2rem;
+            font-weight: bold;
+        }
 
+        .profile-edit-btn {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            border: 0.1rem solid #dbdbdb;
+            border-radius: 0.3rem;
+            padding: 0 2.4rem;
+            margin-left: 2rem;
+        }
+
+        .profile-stats {
+            margin-top: 2.3rem;
+        }
+
+        .profile-stats li {
+            display: inline-block;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            margin-right: 4rem;
+            cursor: pointer;
+        }
+
+        .profile-stats li:last-of-type {
+            margin-right: 0;
+        }
+
+        .profile-bio {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-top: 2.3rem;
+        }
+
+        .profile-real-name,
+        .profile-stat-count,
+        .profile-edit-btn {
+            font-weight: 600;
+        }
+
+        .profile-edit-btn {
+            padding: 5px 20px;
+        }
+
+        /* Gallery Section */
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -1rem -1rem;
+            padding-bottom: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            flex: 1 0 22rem;
+            margin: 1rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover .gallery-item-info,
+        .gallery-item:focus .gallery-item-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item-info {
+            display: none;
+        }
+
+        .gallery-item-info li {
+            display: inline-block;
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+
+        .gallery-item-likes {
+            margin-right: 2.2rem;
+        }
+
+        .gallery-item-type {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.5rem;
+            text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .fa-clone,
+        .fa-comment {
+            transform: rotateY(180deg);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 40rem) {
+            .profile {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 4rem 0;
+            }
+
+            .profile::after {
+                display: none;
+            }
+
+            .profile-image,
+            .profile-user-settings,
+            .profile-bio,
+            .profile-stats {
+                float: none;
+                width: auto;
+            }
+
+            .profile-image img {
+                width: 7.7rem;
+            }
+
+            .profile-user-settings {
+                flex-basis: calc(100% - 10.7rem);
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 1rem;
+            }
+
+            .profile-user-name {
+                font-size: 2.2rem;
+            }
+
+            .profile-edit-btn {
+                order: 1;
+                padding: 0;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .profile-edit-btn {
+                margin-left: 0;
+            }
+
+            .profile-bio {
+                font-size: 1.4rem;
+                margin-top: 1.5rem;
+            }
+
+            .profile-edit-btn,
+            .profile-bio,
+            .profile-stats {
+                flex-basis: 100%;
+            }
+
+            .profile-stats {
+                order: 1;
+                margin-top: 1.5rem;
+            }
+
+            .profile-stats ul {
+                display: flex;
+                text-align: center;
+                padding: 1.2rem 0;
+                border-top: 0.1rem solid #dadada;
+                border-bottom: 0.1rem solid #dadada;
+            }
+
+            .profile-stats li {
+                font-size: 1.4rem;
+                flex: 1;
+                margin: 0;
+            }
+
+            .profile-stat-count {
+                display: block;
+            }
+        }
+
+        @supports (display: grid) {
+            .profile {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: repeat(3, auto);
+                grid-column-gap: 3rem;
+                align-items: center;
+            }
+
+            .profile-image {
+                grid-row: 1 / -1;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+                grid-gap: 2rem;
+            }
+
+            .profile-image,
+            .profile-user-settings,
+            .profile-stats,
+            .profile-bio,
+            .gallery-item,
+            .gallery {
+                width: auto;
+                margin: 0;
+            }
+
+            @media (max-width: 40rem) {
+                .profile {
+                    grid-template-columns: auto 1fr;
+                    grid-row-gap: 1.5rem;
+                }
+
+                .profile-image {
+                    grid-row: 1 / 2;
+                }
+
+                .profile-user-settings {
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    grid-gap: 1rem;
+                }
+
+                .profile-edit-btn,
+                .profile-stats,
+                .profile-bio {
+                    grid-column: 1 / -1;
+                }
+
+                .profile-user-settings,
+                .profile-edit-btn,
+                .profile-settings-btn,
+                .profile-bio,
+                .profile-stats {
+                    margin: 0;
+                }
+            }
+        }
+
+        .Head {
+            text-align: center;
+            width: 100%;
+            margin: 30px 0px -30px 0px;
+            color: #777;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: xx-large;
+        }
+
+        blockquote {
+            display: block;
+            background: #fff;
+            padding: 15px 20px 15px 45px;
+            margin: 0 0 20px;
+            position: relative;
+            width: 90%;
+            left: 50%;
+            transform: translate(-50%);
+
+            /*Font*/
+            font-family: Georgia, serif;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #666;
+            text-align: justify;
+
+            /*Borders - (Optional)*/
+            border-left: 15px solid orange;
+            border-right: 2px solid orange;
+
+            /*Box Shadow - (Optional)*/
+            -moz-box-shadow: 2px 2px 15px #ccc;
+            -webkit-box-shadow: 2px 2px 15px #ccc;
+            box-shadow: 2px 2px 15px #ccc;
+        }
+
+        blockquote::before {
+            content: "\201C";
+            /*Unicode for Left Double Quote*/
+
+            /*Font*/
+            font-family: Georgia, serif;
+            font-size: 60px;
+            font-weight: bold;
+            color: #999;
+
+            /*Positioning*/
+            position: absolute;
+            left: 10px;
+            top: 5px;
+        }
+
+        blockquote::after {
+            /*Reset to make sure*/
+            content: "";
+        }
+
+        blockquote a {
+            text-decoration: none;
+            background: #eee;
+            cursor: pointer;
+            padding: 0 3px;
+            color: orange;
+        }
+
+        blockquote a:hover {
+            color: #666;
+        }
+
+        blockquote em {
+            font-style: italic;
+        }
     </style>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/svg.css">
 
 </head>
+
 <body>
 
-    <center>
-    <div class="Head">
-        <h1><q>Teamwork: Turning dreams into reality</q></h1>
+    <!-- navigation bar -->
+    <div class="header">
+        <table>
+            <tr>
+                <td class="part0">
+                    <div class="image">
+                        <img
+                            src="https://lh3.googleusercontent.com/a/ACg8ocJsh_HvimSao3HWWPsaldYXzGkZRNAd7iGvtefW5gUnVyo=s411-c-no">
+                    </div>
+                </td>
+                <td class="part1">
+                    <h3 style="font-size: 20px;">Notes By <font class="name">Dipesh</font> &#128149;</h3>
+                </td>
+                <td class="part2"><span class="name" style="font-size:30px;cursor:pointer"
+                        onclick="history.back()">&#129092;</span></td>
+            </tr>
+        </table>
     </div>
-</center>
 
     <header>
         <div class="container">
@@ -389,12 +468,13 @@ h1
                 <div class="profile-image">
                     <img src="https://i.pinimg.com/736x/8b/0b/62/8b0b6244d21a818a1e54e5567fcdd4db.jpg" alt="">
                 </div>
-    
+
                 <div class="profile-user-settings">
                     <h1 class="profile-user-name">x_darkvanilla_x</h1>
-                    <button class="btn profile-edit-btn" onclick="location.href='https://www.instagram.com/x_darkvanilla_x/'">Follow</button>
+                    <button class="btn profile-edit-btn"
+                        onclick="location.href='https://www.instagram.com/x_darkvanilla_x/'">Follow</button>
                 </div>
-    
+
                 <div class="profile-stats">
                     <ul>
                         <li><span class="profile-stat-count">64</span> posts</li>
@@ -402,7 +482,7 @@ h1
                         <li><span class="profile-stat-count">206</span> following</li>
                     </ul>
                 </div>
-    
+
                 <div class="profile-bio">
                     <p><span class="profile-real-name">Dipesh 💕</span>
                         <br>
@@ -419,92 +499,110 @@ h1
                 </div>
             </div>
         </div>
-   
+
     </header>
 
     <main>
-    
+
         <div class="container">
-    
+
             <div class="gallery">
-    
-    
+
+
                 <div class="gallery-item" tabindex="0">
-    
-                    <img src="https://i.pinimg.com/originals/db/a5/1d/dba51de4001bdb63efb585f3379d2046.jpg" class="gallery-image" alt="">
-    
+
+                    <img src="https://i.pinimg.com/originals/db/a5/1d/dba51de4001bdb63efb585f3379d2046.jpg"
+                        class="gallery-image" alt="">
+
                     <div class="gallery-item-info">
-    
+
                         <ul>
-                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 89</li>
-                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 5</li>
+                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i
+                                    class="fas fa-heart" aria-hidden="true"></i> 89</li>
+                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i
+                                    class="fas fa-comment" aria-hidden="true"></i> 5</li>
                         </ul>
-    
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="gallery-item" tabindex="0">
-    
-                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop" class="gallery-image" alt="">
-    
+
+                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop"
+                        class="gallery-image" alt="">
+
                     <div class="gallery-item-type">
-    
+
                         <span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
-    
+
                     </div>
-    
+
                     <div class="gallery-item-info">
-    
+
                         <ul>
-                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 42</li>
-                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i
+                                    class="fas fa-heart" aria-hidden="true"></i> 42</li>
+                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i
+                                    class="fas fa-comment" aria-hidden="true"></i> 1</li>
                         </ul>
-    
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="gallery-item" tabindex="0">
-    
-                    <img src="https://images.unsplash.com/photo-1502630859934-b3b41d18206c?w=500&h=500&fit=crop" class="gallery-image" alt="">
-    
+
+                    <img src="https://images.unsplash.com/photo-1502630859934-b3b41d18206c?w=500&h=500&fit=crop"
+                        class="gallery-image" alt="">
+
                     <div class="gallery-item-type">
-    
+
                         <span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i>
-    
+
                     </div>
-    
+
                     <div class="gallery-item-info">
-    
+
                         <ul>
-                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 38</li>
-                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i
+                                    class="fas fa-heart" aria-hidden="true"></i> 38</li>
+                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i
+                                    class="fas fa-comment" aria-hidden="true"></i> 0</li>
                         </ul>
-    
+
                     </div>
-    
+
                 </div>
-    
+
             </div>
-    
+
         </div>
-    
+
     </main>
+
+    <blockquote>
+        I've created a user-friendly notes website designed to simplify and enhance the note-taking experience for
+        users. With a clean and intuitive interface, it offers a convenient platform for organizing thoughts, ideas, and
+        information. Users can easily create, edit, and categorize their notes, making it a versatile tool for students,
+        professionals, and anyone seeking an efficient way to keep track of their thoughts and important details.
+    </blockquote>
 
 
     <header>
         <div class="container">
             <div class="profile">
                 <div class="profile-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOI3Iut3zE_UjsylTdfPxhII6p7e5nRimp7A&usqp=CAU" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOI3Iut3zE_UjsylTdfPxhII6p7e5nRimp7A&usqp=CAU"
+                        alt="">
                 </div>
-    
+
                 <div class="profile-user-settings">
                     <h1 class="profile-user-name">vrush_0318</h1>
-                    <button class="btn profile-edit-btn" onclick="location.href='https://www.instagram.com/vrush_0318/'">Follow</button>
+                    <button class="btn profile-edit-btn"
+                        onclick="location.href='https://www.instagram.com/vrush_0318/'">Follow</button>
                 </div>
-    
+
                 <div class="profile-stats">
                     <ul>
                         <li><span class="profile-stat-count">4</span> posts</li>
@@ -512,7 +610,7 @@ h1
                         <li><span class="profile-stat-count">106</span> following</li>
                     </ul>
                 </div>
-    
+
                 <div class="profile-bio">
                     <p><span class="profile-real-name">V R U S H A L</span>
                         <br>
@@ -523,83 +621,165 @@ h1
                 </div>
             </div>
         </div>
-   
+
     </header>
-   
+
     <main>
-    
+
         <div class="container">
-    
+
             <div class="gallery">
-    
-    
+
+
                 <div class="gallery-item" tabindex="0">
-    
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFiFPtX1q9Hte8d69uhpGvygFfCaq0AJoWbQ&usqp=CAU" class="gallery-image" alt="">
-    
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFiFPtX1q9Hte8d69uhpGvygFfCaq0AJoWbQ&usqp=CAU"
+                        class="gallery-image" alt="">
+
                     <div class="gallery-item-info">
-    
+
                         <ul>
-                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 89</li>
-                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 5</li>
+                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i
+                                    class="fas fa-heart" aria-hidden="true"></i> 89</li>
+                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i
+                                    class="fas fa-comment" aria-hidden="true"></i> 5</li>
                         </ul>
-    
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="gallery-item" tabindex="0">
-    
+
                     <img src="https://pbs.twimg.com/media/FO4W107WYAA-0LR.jpg:large" class="gallery-image" alt="">
-    
+
                     <div class="gallery-item-type">
-    
+
                         <span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
-    
+
                     </div>
-    
+
                     <div class="gallery-item-info">
-    
+
                         <ul>
-                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 42</li>
-                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i
+                                    class="fas fa-heart" aria-hidden="true"></i> 42</li>
+                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i
+                                    class="fas fa-comment" aria-hidden="true"></i> 1</li>
                         </ul>
-    
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="gallery-item" tabindex="0">
-    
-                    <img src="https://wallpaperswide.com/download/sky_hd-wallpaper-1280x1280.jpg" class="gallery-image" alt="">
-    
+
+                    <img src="https://wallpaperswide.com/download/sky_hd-wallpaper-1280x1280.jpg" class="gallery-image"
+                        alt="">
+
                     <div class="gallery-item-type">
-    
+
                         <span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i>
-    
+
                     </div>
-    
+
                     <div class="gallery-item-info">
-    
+
                         <ul>
-                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 38</li>
-                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+                            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i
+                                    class="fas fa-heart" aria-hidden="true"></i> 38</li>
+                            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i
+                                    class="fas fa-comment" aria-hidden="true"></i> 0</li>
                         </ul>
-    
+
                     </div>
-    
+
                 </div>
-    
+
             </div>
-    
+
         </div>
-    
+
     </main>
 
+    <blockquote>
+        This website is the result of my work with a toolkit that includes HTML, CSS, and JavaScript for coding, Figma
+        for design, icons sourced from platforms like Flaticon to enhance visuals, and educational guidance from
+        resources like W3Schools and Codepen. These elements came together to create a fully functional and
+        aesthetically pleasing web platform that I'm proud to share.
+    </blockquote>
+
+
+    <!-- Designed with Figma -->
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="study">
+            <rect width="64" height="64" />
+            <g id="smoke">
+                <path id="smoke-2"
+                    d="M9 21L9.55279 19.8944C9.83431 19.3314 9.83431 18.6686 9.55279 18.1056L9 17L8.44721 15.8944C8.16569 15.3314 8.16569 14.6686 8.44721 14.1056L9 13"
+                    stroke="#797270" />
+                <path id="smoke-1"
+                    d="M6.5 22L7.05279 20.8944C7.33431 20.3314 7.33431 19.6686 7.05279 19.1056L6.5 18L5.94721 16.8944C5.66569 16.3314 5.66569 15.6686 5.94721 15.1056L6.5 14"
+                    stroke="#797270" />
+            </g>
+            <g id="laptop">
+                <rect id="laptop-base" x="17" y="28" width="20" height="3" fill="#F3F3F3" stroke="#453F3C"
+                    stroke-width="2" />
+                <rect id="laptop-screen" x="18" y="17" width="18" height="11" fill="#5A524E" stroke="#453F3C"
+                    stroke-width="2" />
+                <rect id="line-1" x="20" y="19" width="14" height="1" fill="#F78764" />
+                <rect id="line-2" x="20" y="21" width="14" height="1" fill="#F9AB82" />
+                <rect id="line-3" x="20" y="23" width="14" height="1" fill="#F78764" />
+                <rect id="line-4" x="20" y="25" width="14" height="1" fill="#F9AB82" />
+            </g>
+            <g id="cup">
+                <rect id="Rectangle 978" x="5" y="24" width="5" height="7" fill="#CCC4C4" stroke="#453F3C"
+                    stroke-width="2" />
+                <path id="Ellipse 416" d="M11 28C12.1046 28 13 27.1046 13 26C13 24.8954 12.1046 24 11 24"
+                    stroke="#453F3C" stroke-width="2" />
+                <rect id="Rectangle 996" x="6" y="25" width="3" height="1" fill="#D6D2D1" />
+            </g>
+            <g id="books">
+                <rect id="Rectangle 984" x="58" y="27" width="4" height="14" transform="rotate(90 58 27)" fill="#B16B4F"
+                    stroke="#453F3C" stroke-width="2" />
+                <rect id="Rectangle 985" x="56" y="23" width="4" height="14" transform="rotate(90 56 23)" fill="#797270"
+                    stroke="#453F3C" stroke-width="2" />
+                <rect id="Rectangle 986" x="60" y="19" width="4" height="14" transform="rotate(90 60 19)" fill="#F78764"
+                    stroke="#453F3C" stroke-width="2" />
+                <rect id="Rectangle 993" x="47" y="20" width="12" height="1" fill="#F9AB82" />
+                <rect id="Rectangle 994" x="43" y="24" width="12" height="1" fill="#54504E" />
+                <rect id="Rectangle 995" x="45" y="28" width="12" height="1" fill="#804D39" />
+            </g>
+            <g id="desk">
+                <rect id="Rectangle 973" x="4" y="31" width="56" height="5" fill="#797270" stroke="#453F3C"
+                    stroke-width="2" />
+                <rect id="Rectangle 987" x="10" y="36" width="30" height="6" fill="#797270" stroke="#453F3C"
+                    stroke-width="2" />
+                <rect id="Rectangle 975" x="6" y="36" width="4" height="24" fill="#797270" stroke="#453F3C"
+                    stroke-width="2" />
+                <rect id="Rectangle 974" x="40" y="36" width="18" height="24" fill="#797270" stroke="#453F3C"
+                    stroke-width="2" />
+                <line id="Line 129" x1="40" y1="48" x2="58" y2="48" stroke="#453F3C" stroke-width="2" />
+                <line id="Line 130" x1="22" y1="39" x2="28" y2="39" stroke="#453F3C" stroke-width="2" />
+                <line id="Line 142" x1="46" y1="42" x2="52" y2="42" stroke="#453F3C" stroke-width="2" />
+                <line id="Line 131" x1="46" y1="54" x2="52" y2="54" stroke="#453F3C" stroke-width="2" />
+                <rect id="Rectangle 988" x="11" y="37" width="28" height="1" fill="#54504E" />
+                <rect id="Rectangle 992" x="5" y="32" width="54" height="1" fill="#9E9492" />
+                <rect id="Rectangle 989" x="7" y="37" width="2" height="1" fill="#54504E" />
+                <rect id="Rectangle 990" x="41" y="37" width="16" height="1" fill="#54504E" />
+                <rect id="Rectangle 991" x="41" y="49" width="16" height="1" fill="#54504E" />
+                <line id="Line 143" y1="60" x2="64" y2="60" stroke="#453F3C" stroke-width="2" />
+            </g>
+        </g>
+    </svg>
+
+
     <!-- Copy Right -->
-    <center>
-        <p class="copyright">&copy; 2023 Dipesh Adelkar. All rights reserved. Unauthorized duplication or distribution of these notes is prohibited.</p>
+    <center style="font-size: 15px;">
+        <p class="copyright">&copy; 2023 Dipesh Adelkar. All rights reserved. Unauthorized duplication or distribution
+            of these notes is prohibited.</p>
     </center>
 
 </body>
+
 </html>
